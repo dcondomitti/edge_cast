@@ -14,6 +14,10 @@ module EdgeCast
             put('edge/purge', management_params(media_type, path))
           end
 
+          def status(id)
+            get ("edge/purge/#{id}")
+          end
+
           private
 
           def management_params(media_type, path)
